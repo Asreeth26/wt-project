@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          
+            background-color: rgba(220, 238, 250, 0.9) ;   
+        
+        }
+
+        select{
+            background-color: #7474ff;
+            padding: 4px;
+            border-radius: 10px;
+            font-weight: bolder;
+            position: absolute;
+            left:900px;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 16px;
+            box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 90%);
+        }
+
+        body[theme='Violet'] select{
+            background-color: #E7BCDE;
+
+        }
+        body[theme='Dark'] select{
+            background-color: #017d5a;
+            font-family: cursive;
+
+        }
+
+
+        
+        div{
+            height: 3px;
+            position: absolute;
+            left: 300px;
+        }
+
+        a {
+            list-style-type: none;
+            font-size: 20px;
+            
+            color: black;
+            text-decoration: none;
+            
+            
+            
+        }
+        button{
+            border-radius: 30px;
+            background-color:#f56f46 ;
+            margin-left: 100px;
+            padding: 1 6 1 6;
+            font-weight: 600;
+            box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 90%);
+
+        }
+        button:hover{
+            background-color:#172153 ;
+            
+            
+        }
+        a:hover{
+            color: white;
+        }
+        body[theme='Original'] {
+            
+            background-color: rgba(220, 238, 250, 0.9);
+            
+        }
+
+        body[theme='Violet'] {
+            color: #1A1A1D;
+            background-color: #A367B1;
+            
+            
+            
+        }
+        body[theme='Violet'] button{
+            
+            border-radius: 30px;
+            background-color:#E7BCDE ;
+            margin-left: 100px;
+            padding: 1 6 1 6;
+            font-weight: 600;
+            font-family: monospace;
+
+        
+        }
+        body[theme='Violet'] button:hover{
+            background-color:#f887df ;
+            
+        }
+        body[theme='Violet'] a:hover{
+            color: black;
+        }
+
+
+
+        body[theme='Dark']{
+            background-color: #0F0F0F;
+        }
+        body[theme='Dark'] button{
+            
+            border-radius: 30px;
+            background-color:#017d5a ;
+            margin-left: 100px;
+            padding: 1 6 1 6;
+            font-weight: 600;
+            font-family: cursive;
+        }
+        body[theme='Dark'] button:hover{
+            background-color:#0bebcd ;
+            
+        }
+        body[theme='Dark'] a:hover{
+            color: black;
+        }
+
+
+        
+        
+    </style>
+</head>
+<body>
+    
+        <div theme="Original">
+            
+            <button><a href="Login.html" target="right">Login</a></button>
+            <button><a href="Register.html" target="right">Register</a></button>
+            <button><a  target="right">Catalog</a></button>
+            <button ><a  target="right">Cart</a></button>
+            
+        </div>
+        <div>
+            <select name="theme" id="t" onchange="changeMode()">
+                <option value="Original" selected>Original</option>
+                <option value="Violet">Violet</option>
+                <option value="Dark">Dark</option>
+               
+            </select>
+        </div>
+        
+        
+        
+    <script>
+        function changeMode() {
+            var selected = document.getElementById("t").value;
+            console.log(selected);
+            var frames = parent.frames;
+
+            for (var i = 0; i < frames.length; i++) {
+                var frameDocument = frames[i].document;
+
+                if (frameDocument) {
+                    var body = frameDocument.getElementsByTagName("body")[0];  
+                    body.setAttribute("theme",selected);
+                    localStorage.setItem("theme", selected);
+                }
+            }
+        }
+
+        window.onload = function() {
+    var storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      document.body.setAttribute("theme", storedTheme);
+    }
+  };
+
+    </script>
+    
+    
+</body>
+</html>

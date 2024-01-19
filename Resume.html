@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            
+        }
+        div{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        table,th,tr,td{
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 20px;
+        }
+        section{
+            position: relative;
+            left: 35%;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        fieldset
+        {
+            margin-left: 150px;
+            margin-right: 200px;
+            background-color: wheat;
+            color: #172153 ;
+            border: 2px dashed;
+            border-radius: 30px;
+        }
+        div
+        {
+            background-color: #172153;
+            color: wheat;
+            border: 2px dashed;
+            border-radius: 30px;
+        }
+        body[theme='Violet'] div {
+            background-color: #7b0396;
+            color: #f7c3ff;
+            border: 2px solid;
+            border-radius: 30px;
+            font-family: monospace;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+        body[theme='Violet'] fieldset{
+            background-color: rgb(255, 175, 254);
+
+        }
+
+        body[theme='Dark']{
+            background-color: #0F0F0F;
+        }
+
+
+        body[theme='Dark'] div {
+            background-color: #01694b;
+            color: #78ffed;
+            border: 2px solid;
+            border-radius: 30px;
+            font-family: monospace;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+        body[theme='Dark'] fieldset{
+            background-color: #017d5a;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <fieldset>
+        <div>
+            <h1>Asreeth Putheti</h1>
+            <p>Visakhapatnam, India | asreethp@gmail.com | +9100000 </p>
+        </div>
+        
+        <div>
+            <u><h2>Profile</h2></u>
+            <p style="width: 60%; margin-left: 140px;">A Third year CS student seeking an internship opportunity to gain hands-on experience and further    
+                develop my skills. Strong academic record, with a passion or learning and drive to succeed.
+            </p>
+        </div>
+        <div>
+            <u><h2>Education</h2></u>
+            <table align="center" cellspacing="50px">
+                <tr>
+                    <th>Anil Neerukonda Institute of Technology and Sciences</th>
+                    <th>Nov 2021 – Present</th>
+                </tr>
+                <tr>
+                    <td>Bachelor of Technology in Computer Science	</td>
+                    <td>GPA: 9.3</td>
+                </tr>
+                <tr>
+                    <th>Narayana Junior College</th>
+                    <th>Jun 2019 – May2021</th>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>Score: 978/1000</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <u><h2>Technical Skills</h2></u>
+           <p>
+            1) HTML, CSS, Bootstrap,JavaScript
+           </p>
+           <p>
+            2) Python 
+           </p>
+        </div>
+        <div>
+            <u><h2>Projects</h2></u>
+            <p>1)Tic Tak Toe : implemented in js</p>
+            <p>2)Login Page </p>
+        </div>
+    
+    </fieldset>
+
+    <script>
+     
+        window.onload = function() {
+    var storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      document.body.setAttribute("theme", storedTheme);
+    }
+  };
+
+</script>
+</body>
+</html>

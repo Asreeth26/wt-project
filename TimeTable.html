@@ -1,0 +1,154 @@
+<html>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        body[theme='Original'] table{
+            background-color:#172153 ;
+            position: relative;
+            top: 30px;
+            border-bottom: 100px;
+            font-family: sans-serif;
+            font-weight: 700;
+            border: 2px dashed;
+            border-radius: 10px;
+        }
+        td
+        {
+            color: wheat;
+            border: 1px solid;
+            border-radius: 3px;
+        }
+        body[theme='Violet'] {
+            background-color: rgb(247, 201, 255);
+
+        }
+        body[theme='Violet'] table{
+            background-color:#7b0396 ;
+            font-family: monospace;
+            border: 2px;
+
+        }
+        body[theme='Violet'] td
+        {
+            color: #E7BCDE;
+            border: 2px solid;
+            border-radius: 5px;
+        }
+
+        
+
+
+
+
+
+
+        body[theme='Dark'] {
+            background-color: #0f0f0f;
+
+        }
+        body[theme='Dark'] table{
+            background-color:#017d5a ;
+            font-family: cursive;
+            border: 2px;
+
+        }
+        body[theme='Dark'] td
+        {
+            color: #033d35;
+            border: 2px solid;
+            border-radius: 5px;
+            font-size: 19px;
+        }
+        
+    </style>
+    <body >
+        <table border="2" cellspacing="0" align="center" width="90%" height="100%" style="font-family: 'Times New Roman', Times, serif;font-weight: bold;">
+            
+            <tr align="center">
+                <td colspan="10">III/IV B. Tech. SECOND SEMESTER TIME TABLE (A. Y. 2023-2024)</td>
+            </tr>
+            <tr align="center">
+                <td colspan="4">Room NO. C-309</td>
+                <td colspan="2">CSE-A</td>
+                <td colspan="4">with effect from  :  18/12/2023</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td colspan="2"></td>
+                <td colspan="4"></td>
+            </tr>
+            <tr align="center">
+                <td>TIME/DAY</td>
+                <td>8.40-9.30</td>
+                <td>9.30-10.20</td>
+                <td>10.20-11.10</td>
+                <td>11.10-12.00</td>
+                <td>12.00-12.50</td>
+                <td>12.50-1.40</td>
+                <td>1.40-2.30</td>
+                <td>2.30-3.20</td>
+                <td>3.20-4.10</td>
+            </tr>
+            <tr align="center">
+                <td>Monday</td>
+                <td>NNDL</td>
+                <td colspan="2">QA</td>
+                <td>WT</td>
+                <td rowspan="6">L<br>U<br>N<br>C<br>H<br> <br>B<br>R<br>E<br>A<br>K</td>
+                <td>IRE</td>
+                <td>OOSE</td>
+                <td colspan="2">CRT</td>
+            </tr>
+            <tr align="center">
+                <td>Tuesday</td>
+                <td>OOSE</td>
+                <td colspan="2">VA</td>
+                <td>ML</td>
+                <td>NNDL</td>
+                <td>WT</td>
+                <td>CNS</td>
+                <td>IRE</td>
+            </tr>
+            <tr align="center">
+                <td>Wednesday</td>
+                <td>CNS</td>
+                <td>ML</td>
+                <td>IRE</td>
+                <td>NNDL</td>
+                <td colspan="3">WT</td>
+                <td >LIBRARY</td>
+            </tr>
+            <tr align="center">
+                <td>Thursday</td>
+                <td>WT</td>
+                <td>NNDL</td>
+                <td>IRE</td>
+                <td>CNS</td>
+                <td>ML</td>
+                <td>OOSE</td>
+                <td colspan="2" >COUNSELLING</td>
+            </tr>
+            <tr align="center">
+                <td>FRIDAY</td>
+                <td>ML</td>
+                <td colspan="3">OOSE</td>
+                <td>CNS</td>
+                <td>OOSE</td>
+                <td>WT</td>
+                <td>SPORTS</td>
+            </tr>
+            
+        </table>
+    </body>
+    <script>
+     
+        window.onload = function() {
+    var storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      document.body.setAttribute("theme", storedTheme);
+    }
+  };
+
+</script>
+</html>

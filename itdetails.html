@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center ; 
+            color: #172153;
+             font-family: sans-serif;
+              font-weight: 800;
+            }
+        
+        table {
+        border-collapse: collapse;
+        width: 80%;
+        position: relative;
+        left: 100px;
+        top: 40px;
+        
+    }
+    body[theme='Original'] tr:nth-child(even){
+        background-color: aliceblue;
+    }
+    body[theme='Original'] tr:hover{
+        background-color: #a2daff;
+
+    }
+
+    th, td {
+        border: 1px solid #131111;
+        text-align: center;
+        padding: 10px;
+    }
+    tr{
+        height: 15px;
+    }
+    th {
+        background-color: #172153;
+        color: wheat;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    img{
+        display: inline;
+        padding: 0px;
+        width: 70px;
+        height: 50px;
+        border-radius: 20%;
+    }
+    .first-head{
+        width: 2%;
+    }
+    .third-head{
+        width: 5%;
+    }
+    body[theme='Violet'] h1{
+        color: #A367B1;
+    
+    }
+    body[theme='Violet']  th {
+        background-color: #ff8ae6;
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: monospace;
+    }
+    body[theme='Violet'] tr{
+        font-family: monospace;
+    }
+    body[theme='Violet'] tr:nth-child(even){
+        background-color: #fce3f7;
+    }
+
+
+    body[theme='Dark']{
+        background-color: #0F0F0F;
+    }
+
+
+    body[theme='Dark'] h1{
+        color: #017d5a;
+    
+    }
+    body[theme='Dark']  th {
+        background-color: #017d5a;
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: monospace;
+    }
+    body[theme='Dark'] tr{
+        font-family: monospace;
+        background-color: #b8e0da;
+    }
+    
+
+
+
+    </style>
+</head>
+<body>
+    
+    <h1 >IT DETAILS</h1>
+        
+    
+    <div>
+        <table >
+                <tr>
+                   <th class="first-head">SNo</th>
+                   <th class="first-head">Photo</th>
+                   <th class="third-head">Name</th>
+                   <th class="third-head">Designation</th>
+                   <th class="third-head">Qualification</th>
+                </tr>
+            
+        
+                <tr>
+                    <td>1</td>
+                    <td><img src="https://cdn2.vectorstock.com/i/1000x1000/95/86/boy-icon-flat-style-modern-design-vector-8759586.jpg" alt=""></td>
+                    <td>Dr.M  Sam</td>
+                    <td>Cricketer</td>
+                    <td>10th pass</td>
+                    
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="https://cdn2.vectorstock.com/i/1000x1000/95/86/boy-icon-flat-style-modern-design-vector-8759586.jpg" alt=""></td>
+                    <td>Dr.Sena</td>
+                    <td>Prof</td>
+                    <td>12th pass</td>
+                    
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="https://cdn2.vectorstock.com/i/1000x1000/95/86/boy-icon-flat-style-modern-design-vector-8759586.jpg"alt=""></td>
+                    <td>Dr.Minna</td>
+                    <td>Prof</td>
+                    <td>12th pass</td>
+                    
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img src="https://cdn2.vectorstock.com/i/1000x1000/95/86/boy-icon-flat-style-modern-design-vector-8759586.jpg" alt=""></td>
+                    <td>Dr.Minna</td>
+                    <td>Prof</td>
+                    <td>Btech</td>
+                    
+                </tr>
+    
+            
+        </table>
+    
+        
+    </div>
+    
+    <script>
+     
+        window.onload = function() {
+    var storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      document.body.setAttribute("theme", storedTheme);
+    }
+  };
+
+</script>
+</body>
+</html>

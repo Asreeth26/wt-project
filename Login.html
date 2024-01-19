@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            box-sizing: border-box;
+            
+         }
+        body{
+            background-color:  rgba(220, 238, 250, 0.9);
+            font-family: sans-serif;
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            column-gap: 50%;
+            
+        }
+        input{
+            height: 40px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            padding: 0 0 0 45px;
+            background-color: #EEEDED;
+           
+        }
+        button{
+            border-radius: 30px;
+            padding: 0 0 0 0px;
+            font-size: 15px;
+            height: 35px;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;
+            background-color: wheat;
+            
+        }
+        button:hover{
+            background-color: rgb(244, 163, 13);
+
+        }
+        .lol{
+            background-color: #172153;
+            width: 400px;
+            text-align: center;
+            box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 120%);
+            margin: auto auto ;
+            z-index: 1;
+            position: relative;
+            top: 60px;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(244, 163, 13);
+        }
+
+        body[theme='Violet'] {
+            background-color:  #E7BCDE;
+            font-family: monospace;
+            
+            
+        }
+        
+
+        body[theme='Violet'] .lol{
+            background-color: #A367B1;
+            width: 400px;
+            text-align: center;
+            box-shadow: 2px 2px 2px 2px black;
+            margin: auto auto ;
+            z-index: 1;
+            position: relative;
+            top: 60px;
+            border-radius: 30px;
+
+        }
+        body[theme='Violet'] button{
+            background-color: rgb(253, 181, 255);
+        }
+
+
+
+
+        body[theme='Dark'] {
+            background-color:  #0F0F0F;
+            font-family: cursive;
+            
+            
+        }
+        
+
+        body[theme='Dark'] .lol{
+            background-color: #017d5a;
+            width: 400px;
+            text-align: center;
+            box-shadow: 2px 2px 2px 2px black;
+            margin: auto auto ;
+            z-index: 1;
+            position: relative;
+            top: 60px;
+            border-radius: 30px;
+
+        }
+        body[theme='Dark'] button{
+            background-color: #0F0F0F;
+            color: #017d5a;
+            font-weight: bolder;
+        }
+        body[theme='Dark'] button:hover{
+            background-color: #0bebcd;
+            color: black;
+        }
+        
+        
+    </style>
+</head>
+<body>
+        <div class="lol">
+            <h1 style="padding: 10px; color: white; font-weight: 700;">Login</h1>
+        <div class="main">
+            <input type="text" name="" id="" placeholder="UserName">
+            <input type="password" name="" id="" placeholder="Password">
+            <button type="">LOGIN</button>
+        </div>
+        <a href=""><h3 style="padding: 10px; color: white; ">Forgot Password?</h3></a>
+
+        </div>
+        
+        <script>
+     
+            window.onload = function() {
+        var storedTheme = localStorage.getItem("theme");
+        if (storedTheme) {
+          document.body.setAttribute("theme", storedTheme);
+        }
+      };
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" style="font-size: 18px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+       ol,li,a{
+           font-weight: 700;
+           margin-top: 8px;
+           color: wheat;
+           font-size: 18px;
+           
+       }
+       body
+       {
+           background-color: rgba(220, 238, 250, 0.9) ;  
+          
+           
+       }
+       a{
+           
+           text-decoration: none;
+       }
+       
+       a:hover{
+           background-color: #a2daff;
+           color: black;
+       }
+       .test{
+           list-style-type: none;
+       }
+       .test:hover{
+           background-color: #a2daff;
+           width: 20%;
+           color: black;
+         
+       }
+       div{
+           background-color:#172153;
+           border-radius: 20px;
+           box-shadow: 2px 2px black;
+          
+           
+       }
+       h1{
+           color:#172153;
+           font-weight: 800;
+           font-size: 30px;
+         
+       }
+       .testing{
+           color: wheat;
+           font-size: 18px;
+       }
+       
+       body[theme='Original'] {
+        color: wheat;
+        background-color: rgba(220, 238, 250, 0.9);
+        font-family:sans-serif;
+    }
+
+
+body[theme='Violet'] {
+    color: #1A1A1D;
+    background-color: #A367B1;
+    font-family: monospace;
+}
+
+body[theme='Violet'] div {
+    background-color:#E7BCDE;
+           border-radius: 20px;
+           box-shadow: 2px 2px black;
+}
+body[theme='Violet'] .testing{
+            color: black;
+           font-size: 18px;
+
+}
+body[theme='Violet'] li{
+    color: black;
+}
+
+       body[theme='Violet'] .test{
+           list-style-type: none;
+           color: black;
+       }
+
+       body[theme='Violet'] a:hover{
+           background-color: #A367B1;
+           color: black;
+       }
+      
+       body[theme='Violet'] .test:hover{
+           background-color: #A367B1;
+           width: 20%;
+           color: black;
+         
+       }
+
+
+
+
+
+
+       body[theme='Dark'] {
+    color: #1A1A1D;
+    background-color: #0F0F0F;
+    font-family: cursive;
+}
+body[theme='Dark'] h1{
+    color:#017d5a;
+}
+
+body[theme='Dark'] div {
+    background-color:#017d5a;
+           border-radius: 20px;
+           box-shadow: 2px 2px black;
+}
+body[theme='Dark'] .testing{
+            color: black;
+           font-size: 18px;
+
+}
+body[theme='Dark'] li{
+    color: black;
+}
+
+       body[theme='Dark'] .test{
+           list-style-type: none;
+           color: black;
+       }
+
+       body[theme='Dark'] a:hover{
+           background-color: #0bebcd;
+           color: black;
+       }
+      
+       body[theme='Dark'] .test:hover{
+           background-color: #0bebcd;
+           width: 20%;
+           color: black;
+         
+       }
+
+
+
+
+
+
+
+
+
+
+       
+   </style>
+   
+</head>
+<body theme = "Original">
+    <center>
+        <h1> University Data</h1>
+
+    </center>
+    
+    <div>
+
+    
+    <ol type="1" style="line-height:0.85cm;">
+        
+        <li>AU
+            <ol type="a">
+                <li>Anits
+                    <br>
+                    <ol type="i">
+                        <a  href="csedetails.html" target="right"><li class="test">CSE</li></a>
+                        
+                        <a href="ecedetails.html" target="right"><li  class="test">ECE</li></a>
+                        
+                    </ol>
+                </li>
+                
+            </ol>
+        </li>
+        <li>JNTUK
+            <ol type="i">
+                <a   href="itdetails.html" target="right" ><li class="test">IT</li></a>
+                
+                
+                
+            </ol>
+            
+        </li>
+        
+        <li><a  href="display000.html"  target="right" class="testing">UNIVERSITY</a></li>
+
+        <li >
+            <a  href="TimeTable.html"  target="right" 
+            class="testing" >TIME TABLE</a></li>
+        </li>
+
+        <li>
+            <a  href="Resume.html" target="right" class="testing">RESUME</a></li>
+        </li>
+       
+        
+        
+    </ol>
+</div>
+
+<script>
+     
+        window.onload = function() {
+    var storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      document.body.setAttribute("theme", storedTheme);
+    }
+  };
+
+</script>
+</body>
+</html>

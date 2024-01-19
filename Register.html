@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <style>
+            
+            *{
+                font-family: sans-serif;
+                border-top: 10px;
+            }
+            body{
+                background-color: rgba(220, 238, 250, 0.9) ;
+            }
+            fieldset
+            {
+                background-color:  #172153 ;
+                color: rgb(237, 201, 124);
+                border-radius: 30px;
+                
+            }
+            form{
+                position: relative;
+                top: 30px;
+                }
+           td
+           {
+            color:  wheat;
+           }
+           input,select,textarea
+           {
+            background-color: aliceblue;
+            color: rgb(245, 192, 94);
+            border: 2px groove;
+            border-radius: 10px;
+           }
+           button
+           {
+            background-color: aliceblue;
+            color: rgb(245, 192, 94);
+            border: 2px groove;
+            border-radius: 30px;
+           }
+           button:hover
+           {
+            background-color: #172153;
+           }
+           body[theme='Violet']{
+            background-color:  #E7BCDE;
+            font-family: monospace;
+           }
+           body[theme='Violet'] fieldset
+            {
+                background-color:  #A367B1 ;
+                color: black;
+                font-weight: bold;
+                border-radius: 30px;
+                
+            }
+            body[theme='Violet'] input,select,textarea{
+                color: black;
+                font-weight: bold;
+
+            }
+            body[theme='Violet'] td
+           {
+            color:  black;
+            font-family: bolder;
+           }
+
+
+           body[theme='Dark']{
+            background-color:  #0F0F0F;
+            font-family: cursive;
+           }
+           body[theme='Dark'] fieldset
+            {
+                background-color:  #017d5a ;
+                color: #0bebcd;
+                font-weight: bold;
+                border-radius: 30px;
+                
+            }
+            body[theme='Dark'] input,select,textarea{
+                color: black;
+                font-weight: bold;
+
+            }
+            body[theme='Dark'] td
+           {
+            color:  black;
+            font-family: bolder;
+           }
+
+
+
+        </style>
+    </head>
+    <body >
+        <form align="center" style="padding-left: 250px;padding-right: 250px; margin-bottom: 50px;">
+            <fieldset>
+                <legend>PERSONAL DETAILS</legend>
+                <table align="center" cellpadding="5">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Name   :
+                        </td>
+                        <td colspan="4">
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email  :
+                        </td>
+                        <td colspan="4">
+                            <input type="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Gender</label>
+                        </td>
+                        <td>
+                            <input type="radio"  name="G">M
+                        </td>
+                        <td colspan="3">
+                            <input type="radio"  name="G">F
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Language  :
+                        </td>
+                        <td>
+                            <input type="checkbox">Telugu
+                        </td>
+                        <td>
+                            <input type="checkbox">Hindi
+                        </td>
+                        <td colspan="2">
+                            <input type="checkbox">English
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Religion  :
+                        </td>
+                        <td colspan="4">
+                            <select name="rel">
+                                <option></option>
+                                <option value="H">Hindu</option>
+                                <option value="M">Muslim</option>
+                                <option value="C">Christian</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date Of Birth  :
+                        </td>
+                        <td colspan="4">
+                            <input type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mobile No  :
+                        </td>
+                        <td colspan="4">
+                            <input type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address  :
+                        </td>
+                        <td colspan="4">
+                            <textarea rows="4" col="4">
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Btech%  :
+                        </td>
+                        <td colspan="4">
+                            <input type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Inter%  :
+                        </td>
+                        <td colspan="4">
+                            <input type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            SSC%  :
+                        </td>
+                        <td colspan="4">
+                            <input type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <button><input type="submit"></button>
+                        </td>
+                        <td colspan="4" align="right">
+                            <button><input type="reset"></button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+
+        <script>
+     
+            window.onload = function() {
+        var storedTheme = localStorage.getItem("theme");
+        if (storedTheme) {
+          document.body.setAttribute("theme", storedTheme);
+        }
+      };
+    
+    </script>
+    </body>
+</html>
