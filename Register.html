@@ -27,21 +27,14 @@
            input,select,textarea
            {
             background-color: aliceblue;
-            color: rgb(245, 192, 94);
+            color: black;
             border: 2px groove;
             border-radius: 10px;
+
            }
-           button
-           {
-            background-color: aliceblue;
-            color: rgb(245, 192, 94);
-            border: 2px groove;
-            border-radius: 30px;
-           }
-           button:hover
-           {
-            background-color: #172153;
-           }
+           
+           
+           
            body[theme='Violet']{
             background-color:  #E7BCDE;
             font-family: monospace;
@@ -94,7 +87,7 @@
         </style>
     </head>
     <body >
-        <form align="center" style="padding-left: 250px;padding-right: 250px; margin-bottom: 50px;">
+        <form align="center" id="emailForm" style="padding-left: 250px;padding-right: 250px; margin-bottom: 50px;">
             <fieldset>
                 <legend>PERSONAL DETAILS</legend>
                 <table align="center" cellpadding="5">
@@ -118,7 +111,7 @@
                             Email  :
                         </td>
                         <td colspan="4">
-                            <input type="email">
+                            <input id="email" >
                         </td>
                     </tr>
                     <tr>
@@ -161,10 +154,10 @@
                     </tr>
                     <tr>
                         <td>
-                            Date Of Birth  :
+                            Password :
                         </td>
                         <td colspan="4">
-                            <input type="date">
+                            <input type="password" id="password">
                         </td>
                     </tr>
                     <tr>
@@ -172,7 +165,7 @@
                             Mobile No  :
                         </td>
                         <td colspan="4">
-                            <input type="number">
+                            <input type="number" id="mobile">
                         </td>
                     </tr>
                     <tr>
@@ -210,10 +203,10 @@
                     </tr>
                     <tr>
                         <td align="left">
-                            <button><input type="submit"></button>
+                            <input type="submit" value="Submit">
                         </td>
                         <td colspan="4" align="right">
-                            <button><input type="reset"></button>
+                            <input type="reset">
                         </td>
                     </tr>
                 </table>
@@ -221,6 +214,47 @@
         </form>
 
         <script>
+            document.addEventListener("contextmenu", function (e){
+    e.preventDefault();
+}, false);
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+     
+          event.preventDefault()
+
+      let emailInput = document.getElementById('email').value;
+      let pass = document.getElementById("password").value;
+            console.log(emailInput)
+      let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(emailInput) || emailInput == null) {
+     
+        
+        alert('Email is invalid!');
+        return;
+   
+      }
+
+      if (pass.length < 8){
+        alert("password must be at least 8 number");
+        return;
+        
+      }
+
+      let mobileInput = document.getElementById('mobile').value;
+
+      var mobileRegex = /^[0-9]{10}$/;
+
+      if (!mobileRegex.test(mobileInput)) {
+
+        alert('Mobile number is invalid!');
+        return;
+
+      } 
+
+      document.getElementById("emailForm").submit()
+    });
+
+
      
             window.onload = function() {
         var storedTheme = localStorage.getItem("theme");

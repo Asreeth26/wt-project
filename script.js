@@ -1,10 +1,10 @@
-p1 = document.getElementById("number1");
-p2 = document.getElementById("number2");
+img1 = document.getElementById("number1");
+img2 = document.getElementById("number2");
 
 b1 = document.getElementById("player1")
 b2 = document.getElementById("player2")
 const audio = new Audio("dice-142528.mp3");
-const claps = new Audio("claps.mp3")
+
 
 const LADDERS = {
     2:8,
@@ -38,8 +38,11 @@ function generateRandomNumber() {
 
 
 b1.addEventListener("click",()=>{
+    audio.play()
     x = generateRandomNumber();
-    p1.innerHTML = x;
+    let x1= "dice"
+    x1 = x1 + x.toString();
+    img1.src = x1+".png"
 
     let num = null;
     let oldnum = null;
@@ -73,7 +76,7 @@ b1.addEventListener("click",()=>{
 
         if (SNAKES.hasOwnProperty(num)){
             num = SNAKES[num]
-        }
+        } 
         
         oldnum = "" + oldnum
         num = ""+num
@@ -124,7 +127,10 @@ b1.addEventListener("click",()=>{
 
 b2.addEventListener("click",()=>{
     x = generateRandomNumber();
-    p2.innerHTML = x;
+    audio.play()
+    let x1= "dice"
+    x1 = x1 + x.toString();
+    img2.src = x1+".png"
 
     let num = null;
     let oldnum = null;
